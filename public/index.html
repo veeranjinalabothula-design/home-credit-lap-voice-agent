@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home Credit LAP Voice Agent Demo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="hero">
+      <div class="eyebrow">VOICE AGENT DEMO</div>
+      <h1>Home Credit LAP Qualification</h1>
+      <p>Try the qualification conversation using natural customer responses. This is a text demo; it does not place real calls.</p>
+      <div class="pill">Maximum offer: ₹75,00,000</div>
+    </header>
+
+    <section class="panel setup-panel" id="setupPanel">
+      <h2>Start a test conversation</h2>
+      <form id="startForm">
+        <label>Customer name <input id="customerName" value="Priya Sharma" required></label>
+        <label>Agent name <input id="agentName" value="Aarav" required></label>
+        <label>Agent gender
+          <select id="agentGender"><option value="male">Male</option><option value="female">Female</option></select>
+        </label>
+        <label>Language
+          <select id="language"><option>English</option><option>Hindi</option></select>
+        </label>
+        <button type="submit">Start conversation</button>
+      </form>
+    </section>
+
+    <section class="panel chat-panel hidden" id="chatPanel">
+      <div class="chat-heading">
+        <div><h2>Conversation</h2><p id="statusLine">Status: active</p></div>
+        <button type="button" class="secondary" id="resetButton">New conversation</button>
+      </div>
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <form id="messageForm" class="composer">
+        <label class="sr-only" for="customerMessage">Your response</label>
+        <input id="customerMessage" placeholder="Type a natural response…" autocomplete="off" required>
+        <button type="submit" id="sendButton">Send</button>
+      </form>
+      <details>
+        <summary>Qualification state (for testing)</summary>
+        <pre id="stateView"></pre>
+      </details>
+    </section>
+    <footer>Demo only · Do not enter real customer financial or identity information.</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>

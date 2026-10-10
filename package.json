@@ -1,0 +1,19 @@
+{
+  "name": "home-credit-lap-voice-agent",
+  "version": "1.0.0",
+  "description": "Home Credit Loan Against Property qualification voice-agent demo",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
